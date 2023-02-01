@@ -1,28 +1,12 @@
 \documentclass[landscape]{article}
 \usepackage{tikz}
 
-%: === TIPOGRAFÍA === (((
-\usepackage{fontspec}
-\setmainfont[
-  BoldFont       = bodonibi,
-	ItalicFont     = Century modern italic2.ttf,
-	BoldItalicFont = bodonibi,
-	SmallCapsFont  = lmromancaps10-regular.otf
-]{Century_modern.ttf}
-\DeclareSymbolFont{italics}{\encodingdefault}{\rmdefault}{m}{it}
-\DeclareSymbolFontAlphabet{\mathit}{italics}
-\ExplSyntaxOn
-\int_step_inline:nnnn { `A } { 1 } { `Z }
- {  \exp_args:Nf \DeclareMathSymbol{\char_generate:nn{#1}{11}}{\mathalpha}{italics}{#1} }
-\int_step_inline:nnnn { `a } { 1 } { `z } {  \exp_args:Nf \DeclareMathSymbol{\char_generate:nn{#1}{11}}{\mathalpha}{italics}{#1}}
-\ExplSyntaxOff
-% )))
-
 \begin{document}
 
 \foreach \n/\m in {
 	Amanda Limón/Ingeniería en sistemas,
 	Lucy Rodríguez/Matemáticas Aplicadas,
+	Daniela Yareli/Matemáticas Aplicadas
 	}{
 	\newpage
 	\begin{tikzpicture}[>=latex]
